@@ -1,0 +1,31 @@
+.header, .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.body{
+    display: flex;
+    flex-direction: row;
+}
+.menu_header, .menu_footer{
+    background-color: beige;
+    padding: 10px 10px 10px 10px;
+    border: solid grey;
+    border-radius: 15%;
+}
+
+.liste, .presentation_hospital{
+    width: 20%;
+}
+.img_hospital{
+    width: 100%;
+    margin: 0px 10px 0px 10px;
+}
+.rod_footer{
+    margin-top: 9%;
+}
+.footer {
+    position:absolute;
+    bottom:5;  
+    width:100%;
+}
