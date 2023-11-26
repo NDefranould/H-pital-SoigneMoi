@@ -3,16 +3,14 @@
     flex-direction: row;
     justify-content: space-around;
 }
-.body{
+.body, .bodySpe{
     display: flex;
     flex-direction: row;
 }
 .bodySpe{
-    display: flex;
-    flex-direction: row;
     justify-content: center;
 }
-.menu_header, .menu_footer{
+.menu {
     background-color: beige;
     padding: 10px 10px 10px 10px;
     border: solid grey;
@@ -54,4 +52,8 @@
 }
 label{
     padding-top: 20px;
+}
+
+h2{
+    text-align: center;
 }
