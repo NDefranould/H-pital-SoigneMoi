@@ -1,9 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const usersController = require('./controllers/usersController');
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json({type: ['application/json', 'text/plain']}));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'views')));
 
@@ -18,9 +21,15 @@ app.get('/', (req, res) => {
     
 });
 
-app.post('/signup', (req, res) => {
-    console.log('couczaeou');
-})
+app.post('/signup', usersController.signup);
+
+/* app.get('/spécialistes/:id', async (req,res) => {
+    const id = req.params.id
+
+    const result = await db.query(`SELECT  questions.content FROM questions
+                                      WHERE id = $1`, [id]);
+
+});*/
 
 /* app.get('/diary/edit/:id', (req, res) => {
     Diary.findOne({
